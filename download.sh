@@ -1,3 +1,4 @@
+#! /bin/bash
 /sbin/e-smith/db yum_repositories set epel repository \
 Name 'Epel - EL6' \
 BaseURL 'http://download.fedoraproject.org/pub/epel/6/$basearch' \
@@ -11,3 +12,4 @@ status disabled
 
 signal-event yum-modify
 yum install nginx --enablerepo=epel
+cp nginx /etc/init.d
